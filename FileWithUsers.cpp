@@ -5,9 +5,12 @@ void FileWithUsers::appendUserToFile(User user)
     xml.ResetPos();
     xml.FindElem();
     xml.IntoElem();
-    xml.AddElem(user.getLogin(),user.getId()) ;
-    xml.SetAttrib("Pass", user.getPassword());
-    xml.OutOfElem();
+    xml.AddElem("UserData");
+    xml.IntoElem();
+    xml.AddElem("UserId",user.getId());
+    xml.AddElem(user.getLogin(), user.getPassword());
+    xml.AddElem(user.getName(),user.getSurname());
+    //xml.OutOfElem();
     xml.Save("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Users.xml");
 }
 
@@ -26,16 +29,21 @@ vector <User> FileWithUsers::loadUsersFromFile()
         xml.IntoElem();
         while (xml.FindElem())
         {
-            user.setLogin(xml.GetTagName());
+            xml.IntoElem();
+            xml.FindElem();
             user.setId(UsefullMethods::conversionStringToInt(xml.GetData()));
-            user.setPassword(xml.GetAttrib("Pass"));
-           // cout<<"hojhoj"<<endl;
-            //system("pause");
+            xml.FindElem();
+            user.setLogin(xml.GetTagName());
+            user.setPassword(xml.GetData());
+            xml.FindElem();
+            user.setName(xml.GetTagName());
+            user.setSurname(xml.GetData());
+            //cout<<user.getLogin();
+           // system("pause");
+
             users.push_back(user);
         }
-
     }
-
     return users;
 }
 void saveAllUsersToFile(vector<User>&users)
