@@ -21,6 +21,7 @@ public:
     };
 void registration();
 void logIn();
+bool isAnyUserLogin();
 
 };
 #endif

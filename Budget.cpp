@@ -8,3 +8,7 @@ void Budget::logIn()
 {
     userMenager.userLogin();
 }
+bool Budget::isAnyUserLogin()
+{
+    return userMenager.isAnyUserLogin();
+}

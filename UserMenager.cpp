@@ -16,8 +16,12 @@ void UserMenager::userRegistration()
 User UserMenager::giveDataOfNewUser()
 {
     User user;
-
     user.setId(getIdForNewUser());
+
+    cout << "Write name: ";
+    user.setName(UsefullMethods::loadLines());
+    cout << "Write surname: ";
+    user.setSurname(UsefullMethods::loadLines());
 
     do
     {
@@ -28,7 +32,6 @@ User UserMenager::giveDataOfNewUser()
 
     cout << "Write password: ";
     user.setPassword(UsefullMethods::loadLines());
-
     return user;
 }
 int UserMenager::getIdForNewUser()
