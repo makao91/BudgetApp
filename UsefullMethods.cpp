@@ -56,6 +56,22 @@ int UsefullMethods::loadInteger()
     }
     return number;
 }
+float UsefullMethods::loadFloat()
+{
+    string inputStream = "";
+    float moneyNumber = 0;
+
+    while (true)
+    {
+        getline(cin, inputStream);
+
+        stringstream myStream(inputStream);
+        if (myStream >> moneyNumber)
+            break;
+        cout << "It isn't correct form of number. Write again with dot: like 11.10 " << endl;
+    }
+    return moneyNumber;
+}
 char UsefullMethods::loadCharacter()
 {
     string inputStream = "";
@@ -73,4 +89,19 @@ char UsefullMethods::loadCharacter()
         cout << "It isn't character. Write again." << endl;
     }
     return character;
+}
+string UsefullMethods::conversionFloatForString(float number)
+{
+    ostringstream ss;
+    ss << number;
+    string str = ss.str();
+    return str;
+}
+float UsefullMethods::conversionStringToFloat(string number)
+{
+    float numberInt;
+    istringstream iss(number);
+    iss >> numberInt;
+
+    return numberInt;
 }

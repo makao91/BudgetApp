@@ -33,5 +33,6 @@ class UserMenager
     void saveAllUsersToFile(vector <User> &users);
     int getIdOffLoggedUser ();
     bool isAnyUserLogin();
+
 };
 #endif

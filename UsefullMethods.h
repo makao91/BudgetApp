@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include <string>
 
 using namespace std;
 
@@ -17,6 +18,9 @@ class UsefullMethods
     static string getNumber(string text, int charPosition);
     static int loadInteger();
     static char loadCharacter();
+    static float loadFloat();
+    static string conversionFloatForString(float number);
+    static float conversionStringToFloat(string number);
 
 };
 #endif

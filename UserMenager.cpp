@@ -67,7 +67,6 @@ int UserMenager::userLogin()
 
     for (int i=0; users.size()>i; i++)
     {
-        cout<<"hophop"<<endl;
         if (users[i].getLogin()==login)
         {
             for (int numberOfTries = 3; numberOfTries > 0; numberOfTries--)

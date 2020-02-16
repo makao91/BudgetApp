@@ -46,7 +46,4 @@ vector <User> FileWithUsers::loadUsersFromFile()
     }
     return users;
 }
-void saveAllUsersToFile(vector<User>&users)
-{
-    cout<<"puppa";
-}
+
