@@ -45,7 +45,7 @@ int main()
 
                 break;
             case '2':
-
+                budget.appendNewExpense();
                 break;
             case '3':
 

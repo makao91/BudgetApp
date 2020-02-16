@@ -1,14 +1,14 @@
 #include "Expense.h"
 
- void Expense::setExpenseId(int newExpenseId)
-        {
-            if (newExpenseId >= 0)
-            expenseId = newExpenseId;
-        }
+void Expense::setExpenseId(int newExpenseId)
+{
+    if (newExpenseId >= 0)
+        expenseId = newExpenseId;
+}
 void Expense::setUserId(int newUserId)
 {
     if (newUserId >= 0)
-    userId = newUserId;
+        userId = newUserId;
 }
 void Expense::setDate(string newDate)
 {
