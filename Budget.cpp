@@ -17,8 +17,21 @@ void Budget::appendNewExpense()
 
     if (userMenager.isAnyUserLogin())
     {
-        expenseMenadzer = new ExpenseMenager(userMenager.getIdOffLoggedUser());
-        expenseMenadzer->registrationOfNewExpense();
+        expenseMenager = new ExpenseMenager(userMenager.getIdOffLoggedUser());
+        expenseMenager->registrationOfNewExpense();
+    }
+     else
+        {
+            cout<<"You need to log in first."<<endl;
+            system("pause");
+        }
+}
+void Budget::appendNewIncome()
+{
+     if (userMenager.isAnyUserLogin())
+    {
+        incomeMenager = new IncomeMenager(userMenager.getIdOffLoggedUser());
+        incomeMenager->registrationOfNewIncome();
     }
      else
         {

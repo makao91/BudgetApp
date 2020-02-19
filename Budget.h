@@ -15,27 +15,29 @@ using namespace std;
 class Budget
 {
 
-UserMenager userMenager;
+    UserMenager userMenager;
 
-ExpenseMenager *expenseMenadzer;
+    ExpenseMenager *expenseMenager;
+    IncomeMenager *incomeMenager;
 
 public:
     Budget (string nameOfFileWithUsers) : userMenager(nameOfFileWithUsers)
     {
-
-    expenseMenadzer = NULL;
+        incomeMenager = NULL;
+        expenseMenager = NULL;
     };
     ~Budget()
     {
-       delete expenseMenadzer;
-
-
-     expenseMenadzer = NULL;
+        delete expenseMenager;
+        delete incomeMenager;
+        incomeMenager = NULL;
+        expenseMenager = NULL;
     };
-void registration();
-void logIn();
-bool isAnyUserLogin();
-void appendNewExpense();
+    void registration();
+    void logIn();
+    bool isAnyUserLogin();
+    void appendNewExpense();
+    void appendNewIncome();
 
 };
 #endif

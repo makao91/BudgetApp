@@ -1,40 +1,42 @@
 # depslib dependency file v1.0
 1580936508 source:c:\users\marcin\desktop\obiektówka\budgetapp\balance.cpp
 
-1581805311 source:c:\users\marcin\desktop\obiektówka\budgetapp\budget.cpp
+1582102163 source:c:\users\marcin\desktop\obiektówka\budgetapp\budget.cpp
 	"Budget.h"
 
-1581805485 source:c:\users\marcin\desktop\obiektówka\budgetapp\expense.cpp
+1581812471 source:c:\users\marcin\desktop\obiektówka\budgetapp\expense.cpp
 	"Expense.h"
 
 1581591878 c:\users\marcin\desktop\obiektówka\budgetapp\expense.h
 	<iostream>
 
-1581810819 source:c:\users\marcin\desktop\obiektówka\budgetapp\expensemenager.cpp
+1582101824 source:c:\users\marcin\desktop\obiektówka\budgetapp\expensemenager.cpp
 	"ExpenseMenager.h"
 
-1581810819 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithexpenses.cpp
+1581812471 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithexpenses.cpp
 	"FileWithExpenses.h"
 
-1580936446 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithincomes.cpp
+1582101900 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithincomes.cpp
+	"FileWithIncomes.h"
 
-1581802623 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithusers.cpp
+1581812471 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithusers.cpp
 	"FileWithUsers.h"
 
-1580936345 source:c:\users\marcin\desktop\obiektówka\budgetapp\incomemenager.cpp
+1582101824 source:c:\users\marcin\desktop\obiektówka\budgetapp\incomemenager.cpp
+	"IncomeMenager.h"
 
-1581810819 source:c:\users\marcin\desktop\obiektówka\budgetapp\main.cpp
+1582102195 source:c:\users\marcin\desktop\obiektówka\budgetapp\main.cpp
 	<iostream>
 	<conio.h>
 	"Budget.h"
 
-1581802034 source:c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.cpp
+1581812471 source:c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.cpp
 	"MoneyOccurence.h"
 
-1581811270 source:c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.cpp
+1581812471 source:c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.cpp
 	"UsefullMethods.h"
 
-1581812061 c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.h
+1581812471 c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.h
 	<iostream>
 	<sstream>
 	<algorithm>
@@ -46,7 +48,7 @@
 1581630288 c:\users\marcin\desktop\obiektówka\budgetapp\user.h
 	<iostream>
 
-1581810819 source:c:\users\marcin\desktop\obiektówka\budgetapp\usermenager.cpp
+1581812471 source:c:\users\marcin\desktop\obiektówka\budgetapp\usermenager.cpp
 	"UserMenager.h"
 
 1581591878 source:c:\users\marcin\desktop\obiektówka\budgetapp\income.cpp
@@ -55,14 +57,14 @@
 1581591878 c:\users\marcin\desktop\obiektówka\budgetapp\income.h
 	<iostream>
 
-1581791148 c:\users\marcin\desktop\obiektówka\budgetapp\usermenager.h
+1581812471 c:\users\marcin\desktop\obiektówka\budgetapp\usermenager.h
 	<iostream>
 	<vector>
 	<windows.h>
 	"User.h"
 	"FileWithUsers.h"
 
-1581802623 c:\users\marcin\desktop\obiektówka\budgetapp\filewithusers.h
+1581812471 c:\users\marcin\desktop\obiektówka\budgetapp\filewithusers.h
 	<iostream>
 	<vector>
 	<cstdlib>
@@ -84,30 +86,40 @@
 	<string>
 	<afx.h>
 
-1581805838 c:\users\marcin\desktop\obiektówka\budgetapp\budget.h
+1582102163 c:\users\marcin\desktop\obiektówka\budgetapp\budget.h
 	<iostream>
 	"UserMenager.h"
 	"ExpenseMenager.h"
 	"IncomeMenager.h"
 
-1581805972 c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.h
+1581812471 c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.h
 	<iostream>
 	"UsefullMethods.h"
 
-1581807415 c:\users\marcin\desktop\obiektówka\budgetapp\expensemenager.h
+1581812471 c:\users\marcin\desktop\obiektówka\budgetapp\expensemenager.h
 	<iostream>
 	<vector>
 	"UsefullMethods.h"
 	"MoneyOccurence.h"
 	"FileWithExpenses.h"
 
-1581811298 c:\users\marcin\desktop\obiektówka\budgetapp\filewithexpenses.h
+1582101900 c:\users\marcin\desktop\obiektówka\budgetapp\filewithexpenses.h
 	<iostream>
 	<vector>
 	"Markup.h"
 	"Expense.h"
 	"UsefullMethods.h"
 
-1581591878 c:\users\marcin\desktop\obiektówka\budgetapp\incomemenager.h
+1582101824 c:\users\marcin\desktop\obiektówka\budgetapp\incomemenager.h
 	<iostream>
+	"UsefullMethods.h"
+	"MoneyOccurence.h"
+	"FileWithIncomes.h"
+
+1582101865 c:\users\marcin\desktop\obiektówka\budgetapp\filewithincomes.h
+	<iostream>
+	<vector>
+	"Markup.h"
+	"Income.h"
+	"UsefullMethods.h"
 
