@@ -23,6 +23,7 @@ public:
     FileWithUsers(string NAMEOFFILEWITHUSERS) : NAME_OF_FILE_WITH_USERS(NAMEOFFILEWITHUSERS){};
     void appendUserToFile(User user);
     vector <User> loadUsersFromFile ();
+    void changePassword(string login, string newPassword);
 
 };
 #endif

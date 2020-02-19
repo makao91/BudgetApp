@@ -57,13 +57,10 @@ int main()
 
                 break;
             case '6':
-
+                budget.changeLoggedUsersPassword();
                 break;
             case '7':
-
-                break;
-            case '8':
-
+                budget.userLogOut();
                 break;
             }
         }
