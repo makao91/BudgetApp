@@ -42,7 +42,7 @@ int main()
             switch (wybor)
             {
             case '1':
-
+                budget.appendNewIncome();
                 break;
             case '2':
                 budget.appendNewExpense();

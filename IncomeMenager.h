@@ -2,14 +2,32 @@
 #define INCOMEMENAGER_H
 
 #include <iostream>
-
+#include "UsefullMethods.h"
+#include "MoneyOccurence.h"
+#include "FileWithIncomes.h"
 
 
 using namespace std;
 
-class IncomeMenager
+class IncomeMenager : public MoneyOccurence
 {
+private:
+    int idLoggedUser;
+    FileWithIncomes fileWithIncomes;
+    int incomeId;
+    vector <Income> incomes;
+    void saveMoneyOccurenceToFile ();
+    int getIdForNewIncome();
+    Income addMoneyOccurence ();
 
+    public:
+IncomeMenager(int userId)
+{
+    idLoggedUser = userId;
+    incomes=fileWithIncomes.loadIncomesFromFile();
+};
+
+void registrationOfNewIncome();
 
 };
 #endif

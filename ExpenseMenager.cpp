@@ -7,7 +7,7 @@ void ExpenseMenager::registrationOfNewExpense()
     Expense singleExpense = addMoneyOccurence();
 
     expenses.push_back(singleExpense);
-    cout<<singleExpense.getExpenseId()<<endl<<singleExpense.getItem()<<endl;
+    //cout<<singleExpense.getExpenseId()<<endl<<singleExpense.getItem()<<endl;
     system("pause");
 
     fileWithExpenses.appendExpenseToFile(singleExpense);

@@ -12,7 +12,7 @@ using namespace std;
 
 class FileWithExpenses
 {
-//const string nameOfFileWithExpenses="Expenses.xml";
+
 CMarkup xml;
 
 public:
