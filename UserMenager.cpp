@@ -101,16 +101,8 @@ void UserMenager::changeLoggedUsersPassword()
     cout << "Write new password: ";
     newPassword = UsefullMethods::loadLines();
 
-    for (int i=0; users.size()>i; i++)
-    {
-        if (users[i].getId() == idLoggedUser)
-        {
-            users[i].setPassword(newPassword);
-            cout << "Password has been changed." << endl << endl;
-            system("pause");
-        }
-    }
-    saveAllUsersToFile(users);
+  fileWithUsers.changePassword(users[idLoggedUser-1].getLogin(), newPassword);
+
 }
 int UserMenager::getIdOffLoggedUser()
 {

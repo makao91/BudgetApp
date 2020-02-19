@@ -39,3 +39,18 @@ void Budget::appendNewIncome()
             system("pause");
         }
 }
+void Budget::userLogOut ()
+{
+     userMenager.userLogOut();
+     delete incomeMenager;
+     incomeMenager = NULL;
+     delete expenseMenager;
+     expenseMenager = NULL;
+}
+void Budget::changeLoggedUsersPassword ()
+{
+   userMenager.changeLoggedUsersPassword();
+}
+
+
+

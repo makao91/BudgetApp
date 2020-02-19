@@ -38,6 +38,8 @@ public:
     bool isAnyUserLogin();
     void appendNewExpense();
     void appendNewIncome();
+    void userLogOut ();
+    void changeLoggedUsersPassword ();
 
 };
 #endif

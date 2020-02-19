@@ -38,12 +38,32 @@ vector <User> FileWithUsers::loadUsersFromFile()
             xml.FindElem();
             user.setName(xml.GetTagName());
             user.setSurname(xml.GetData());
-            //cout<<user.getLogin();
-           // system("pause");
+            xml.OutOfElem();
+            cout<<user.getLogin();
+             system("pause");
 
             users.push_back(user);
         }
     }
     return users;
+}
+void FileWithUsers::changePassword(string login, string newPassword)
+{
+    xml.ResetPos();
+    xml.FindElem("Users");
+    xml.IntoElem();
+    while (xml.FindElem())
+    {
+        xml.IntoElem();
+        if (xml.FindElem(login))
+        {
+            xml.RemoveElem();
+            xml.AddElem(login, newPassword);
+        }
+        xml.OutOfElem();
+    }
+    xml.Save("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Users.xml");
+    cout<<"Password was succesfully changed."<<endl<<"Press any button to continue."<<endl;
+    system("pause");
 }
 
