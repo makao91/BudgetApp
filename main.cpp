@@ -48,10 +48,12 @@ int main()
                 budget.appendNewExpense();
                 break;
             case '3':
-
+                system("cls");
+                budget.showBalanceOfCurrentMonth();
                 break;
             case '4':
-
+                system("cls");
+                budget.showBalanceOfPreviousMonth();
                 break;
             case '5':
 

@@ -38,11 +38,11 @@ vector <User> FileWithUsers::loadUsersFromFile()
             xml.FindElem();
             user.setName(xml.GetTagName());
             user.setSurname(xml.GetData());
-            xml.OutOfElem();
-            cout<<user.getLogin();
-             system("pause");
 
+            //cout<<user.getLogin();
+             //system("pause");
             users.push_back(user);
+             xml.OutOfElem();
         }
     }
     return users;

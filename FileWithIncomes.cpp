@@ -40,10 +40,11 @@ vector <Income> FileWithIncomes::loadIncomesFromFile()
             xml.FindElem();
             singleIncome.setItem(xml.GetTagName());
             singleIncome.setAmount(UsefullMethods::conversionStringToFloat(xml.GetData()));
-                        cout<<singleIncome.getIncomeId()<<endl<<singleIncome.getUserId()<<endl<<singleIncome.getDate()<<endl<<singleIncome.getItem()<<endl<<singleIncome.getAmount();
-                        system("pause");
+                       // cout<<singleIncome.getIncomeId()<<endl<<singleIncome.getUserId()<<endl<<singleIncome.getDate()<<endl<<singleIncome.getItem()<<endl<<singleIncome.getAmount();
+                       // system("pause");
 
             incomes.push_back(singleIncome);
+            xml.OutOfElem();
         }
     }
     return incomes;

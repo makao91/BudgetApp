@@ -40,10 +40,11 @@ vector <Expense> FileWithExpenses::loadExpensesFromFile()
             xml.FindElem();
             singleExpense.setItem(xml.GetTagName());
             singleExpense.setAmount(UsefullMethods::conversionStringToFloat(xml.GetData()));
-                        cout<<singleExpense.getExpenseId()<<endl<<singleExpense.getUserId()<<endl<<singleExpense.getDate()<<endl<<singleExpense.getItem()<<endl<<singleExpense.getAmount();
-                        system("pause");
+                       // cout<<singleExpense.getExpenseId()<<endl<<singleExpense.getUserId()<<endl<<singleExpense.getDate()<<endl<<singleExpense.getItem()<<endl<<singleExpense.getAmount();
+                       // system("pause");
 
             expenses.push_back(singleExpense);
+            xml.OutOfElem();
         }
     }
     return expenses;

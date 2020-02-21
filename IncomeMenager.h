@@ -11,10 +11,10 @@ using namespace std;
 
 class IncomeMenager : public MoneyOccurence
 {
-private:
+protected:
     int idLoggedUser;
     FileWithIncomes fileWithIncomes;
-    int incomeId;
+    //int incomeId;
     vector <Income> incomes;
     void saveMoneyOccurenceToFile ();
     int getIdForNewIncome();
@@ -28,6 +28,7 @@ IncomeMenager(int userId)
 };
 
 void registrationOfNewIncome();
+vector <Income> getIncomeData();
 
 };
 #endif

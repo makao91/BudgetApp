@@ -51,6 +51,14 @@ void Budget::changeLoggedUsersPassword ()
 {
    userMenager.changeLoggedUsersPassword();
 }
-
-
+void Budget::showBalanceOfCurrentMonth()
+{
+    balance = new Balance(userMenager.getIdOffLoggedUser());
+    balance->balanceCurrentMonth();
+}
+void Budget::showBalanceOfPreviousMonth()
+{
+    balance = new Balance(userMenager.getIdOffLoggedUser());
+    balance->balanceOfPreviousMonth();
+}
 
