@@ -105,3 +105,27 @@ float UsefullMethods::conversionStringToFloat(string number)
 
     return numberInt;
 }
+int UsefullMethods::giveMeCurrentMonth ()
+{
+    int currentMonth;
+   time_t t = time(0);   // get time now
+    tm* now = localtime(&t);
+    currentMonth=now->tm_mon + 1;
+
+    return currentMonth;
+}
+int UsefullMethods::giveMeCurrentYear ()
+{
+    int currentYear;
+   time_t t = time(0);   // get time now
+    tm* now = localtime(&t);
+    currentYear=now->tm_year + 1900;
+
+    return currentYear;
+}
+string UsefullMethods::changeDateToDateDividedWithDashes(string dateWitoutDashes)
+{
+     dateWitoutDashes.insert(4,"-");
+     dateWitoutDashes.insert(7,"-");
+     return dateWitoutDashes;
+}

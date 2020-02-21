@@ -8,6 +8,7 @@
 //#include "MoneyOccurence.h"
 #include "ExpenseMenager.h"
 #include "IncomeMenager.h"
+#include "Balance.h"
 
 
 using namespace std;
@@ -19,19 +20,23 @@ class Budget
 
     ExpenseMenager *expenseMenager;
     IncomeMenager *incomeMenager;
+    Balance *balance;
 
 public:
     Budget (string nameOfFileWithUsers) : userMenager(nameOfFileWithUsers)
     {
         incomeMenager = NULL;
         expenseMenager = NULL;
+        balance = NULL;
     };
     ~Budget()
     {
         delete expenseMenager;
         delete incomeMenager;
+        delete balance;
         incomeMenager = NULL;
         expenseMenager = NULL;
+        balance = NULL;
     };
     void registration();
     void logIn();
@@ -40,6 +45,8 @@ public:
     void appendNewIncome();
     void userLogOut ();
     void changeLoggedUsersPassword ();
+    void showBalanceOfCurrentMonth();
+    void showBalanceOfPreviousMonth();
 
 };
 #endif

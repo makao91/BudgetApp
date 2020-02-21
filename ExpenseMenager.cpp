@@ -37,3 +37,8 @@ int ExpenseMenager::getIdForNewExpense()
     else
         return expenses.back().getExpenseId() + 1;
 }
+vector <Expense> ExpenseMenager::getExpenseData()
+{
+    return expenses;
+}
+

@@ -5,6 +5,7 @@
 #include <sstream>
 #include <algorithm>
 #include <string>
+#include <ctime>
 
 using namespace std;
 
@@ -21,6 +22,9 @@ class UsefullMethods
     static float loadFloat();
     static string conversionFloatForString(float number);
     static float conversionStringToFloat(string number);
+    static int giveMeCurrentMonth ();
+    static string changeDateToDateDividedWithDashes(string dateWitoutDashes);
+    static int giveMeCurrentYear ();
 
 };
 #endif

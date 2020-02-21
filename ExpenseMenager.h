@@ -14,10 +14,10 @@ using namespace std;
 
 class ExpenseMenager : public MoneyOccurence
 {
-private:
+protected:
     int idLoggedUser;
     FileWithExpenses fileWithExpenses;
-    int expenseId;
+   // int expenseId; //do usunieciA
     vector <Expense> expenses;
     void saveMoneyOccurenceToFile ();
     int getIdForNewExpense();
@@ -31,6 +31,6 @@ ExpenseMenager(int userId)
 };
 
 void registrationOfNewExpense();
-
+vector <Expense> getExpenseData();
 };
 #endif

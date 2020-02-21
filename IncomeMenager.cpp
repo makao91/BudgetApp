@@ -18,6 +18,7 @@ void IncomeMenager::registrationOfNewIncome()
 }
 Income IncomeMenager::addMoneyOccurence ()
 {
+
     Income singleIncome;
     singleIncome.setUserId(idLoggedUser);
     singleIncome.setIncomeId(getIdForNewIncome());
@@ -35,4 +36,8 @@ int IncomeMenager::getIdForNewIncome()
         return 1;
     else
         return incomes.back().getIncomeId() + 1;
+}
+vector <Income> IncomeMenager::getIncomeData()
+{
+    return incomes;
 }
