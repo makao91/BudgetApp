@@ -11,6 +11,9 @@ using namespace std;
 
 class Balance:  public ExpenseMenager, public IncomeMenager
 {
+    int getYearFromDateString (string date);
+    int getMonthFromDateString (string date);
+
 
 
 public:
@@ -18,5 +21,6 @@ public:
 
     void balanceCurrentMonth();
     void balanceOfPreviousMonth();
+    void balanceOfTimePeriod();
 };
 #endif
