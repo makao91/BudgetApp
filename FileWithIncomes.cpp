@@ -49,4 +49,3 @@ vector <Income> FileWithIncomes::loadIncomesFromFile()
     }
     return incomes;
 }
-

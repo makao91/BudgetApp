@@ -61,4 +61,8 @@ void Budget::showBalanceOfPreviousMonth()
     balance = new Balance(userMenager.getIdOffLoggedUser());
     balance->balanceOfPreviousMonth();
 }
-
+void Budget::showBalanceOfSpecificTimePeriod()
+{
+    balance = new Balance(userMenager.getIdOffLoggedUser());
+    balance->balanceOfTimePeriod();
+}

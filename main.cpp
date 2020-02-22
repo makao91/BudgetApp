@@ -56,7 +56,8 @@ int main()
                 budget.showBalanceOfPreviousMonth();
                 break;
             case '5':
-
+                system("cls");
+                budget.showBalanceOfSpecificTimePeriod();
                 break;
             case '6':
                 budget.changeLoggedUsersPassword();

@@ -129,3 +129,8 @@ string UsefullMethods::changeDateToDateDividedWithDashes(string dateWitoutDashes
      dateWitoutDashes.insert(7,"-");
      return dateWitoutDashes;
 }
+string UsefullMethods::changeDateToDateWithoutDashes(string dateWithDashes)
+{
+    dateWithDashes.erase(4,1);
+    return dateWithDashes;
+}
