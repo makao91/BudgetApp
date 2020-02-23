@@ -16,8 +16,7 @@ Income IncomeMenager::addMoneyOccurence ()
     singleIncome.setUserId(idLoggedUser);
     singleIncome.setIncomeId(getIdForNewIncome());
     singleIncome.setDate(writeYourDate());
-    cout<<"Income came from:"<<endl;
-    cin.sync();
+    cout<<"Income came from: (text-text-text)"<<endl;
     singleIncome.setItem(UsefullMethods::loadLines());
     cout<<"How much did you earn?"<<endl;
     singleIncome.setAmount(UsefullMethods::loadFloat());

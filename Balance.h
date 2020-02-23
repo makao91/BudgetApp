@@ -10,6 +10,7 @@ using namespace std;
 
 class Balance:  public ExpenseMenager, public IncomeMenager
 {
+    int getDayFromDateString(string date);
     int getYearFromDateString (string date);
     int getMonthFromDateString (string date);
     static bool sortByDateExpenses (Expense left, Expense right);

@@ -150,8 +150,20 @@ int Balance::getMonthFromDateString(string date)
 
     return month;
 }
+int Balance::getDayFromDateString(string date)
+{
+    int day = 0;
+    string temporaryDay = "";
+
+    temporaryDay = date[7];
+    temporaryDay += date[8];
+
+    day = UsefullMethods::conversionStringToInt(temporaryDay);
+    return day;
+}
 void Balance::balanceOfTimePeriod()
 {
+    int integerDay = 0;
     int integerMonth = 0;
     int integerYear = 0;
     int counter = 1;
@@ -159,15 +171,17 @@ void Balance::balanceOfTimePeriod()
     float summExpenses = 0;
     string startTimePeriod = "";
     string finishTimePeriod = "";
+    int integerDayFromStartTimePeriod = 0;
     int integerMonthFromStartTimePeriod = 0;
     int integerYearFromStartTimePeriod = 0;
+    int integerDayFromEndTimePeriod = 0;
     int integerMonthFromEndTimePeriod = 0;
     int integerYearFromEndTimePeriod = 0;
 
     sort (expenses.begin(), expenses.end(), sortByDateExpenses);
     sort (incomes.begin(), incomes.end(), sortByDateIncomes);
 
-cout<<"Which time period do you want to see?"<<endl<<endl<<"Write your starting date (yyyy-mm)."<<endl;
+cout<<"Which time period do you want to see?"<<endl<<endl<<"Write your starting date (yyyy-mm-dd)."<<endl;
 cin>>startTimePeriod;
 cout<<"Write your end date (yyyy-mm)."<<endl;
 cin>>finishTimePeriod;
@@ -175,8 +189,10 @@ cin>>finishTimePeriod;
 startTimePeriod = UsefullMethods::changeDateToDateWithoutDashes(startTimePeriod);
 finishTimePeriod = UsefullMethods::changeDateToDateWithoutDashes(finishTimePeriod);
 
+integerDayFromStartTimePeriod = getDayFromDateString(startTimePeriod);
 integerMonthFromStartTimePeriod = getMonthFromDateString(startTimePeriod);
 integerYearFromStartTimePeriod = getYearFromDateString(startTimePeriod);
+integerDayFromEndTimePeriod = getDayFromDateString(finishTimePeriod);
 integerMonthFromEndTimePeriod = getMonthFromDateString(finishTimePeriod);
 integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
 
@@ -187,16 +203,18 @@ integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
     {
         if(incomes[i].getUserId()==IncomeMenager::idLoggedUser )
         {
+            integerDay = getDayFromDateString(incomes[i].getDate());
             integerMonth = getMonthFromDateString(incomes[i].getDate());
             integerYear = getYearFromDateString(incomes[i].getDate());
 
-            if((integerYearFromStartTimePeriod<=integerYear) && (integerYear<=integerYearFromEndTimePeriod) && (integerMonthFromStartTimePeriod<=integerMonth) && (integerMonth<=integerMonthFromEndTimePeriod))
+            if((integerYearFromStartTimePeriod<=integerYear) && (integerYear<=integerYearFromEndTimePeriod) && (integerMonthFromStartTimePeriod<=integerMonth) && (integerMonth<=integerMonthFromEndTimePeriod) && (integerDayFromStartTimePeriod<=integerDay) && (integerDay<=integerDayFromEndTimePeriod))
             {
                 cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(incomes[i].getDate())<<endl<<incomes[i].getItem()<<" - "<<incomes[i].getAmount()<<" zl"<<endl;
                 counter++;
                 summIncomes += incomes[i].getAmount();
             }
         }
+        integerDay = 0;
         integerMonth = 0;
         integerYear = 0;
     }
@@ -210,10 +228,11 @@ integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
     {
         if(expenses[j].getUserId()==ExpenseMenager::idLoggedUser )
         {
+            integerDay = getDayFromDateString(expenses[j].getDate());
             integerMonth = getMonthFromDateString(expenses[j].getDate());
             integerYear = getYearFromDateString(expenses[j].getDate());
 
-            if((integerYearFromStartTimePeriod<=integerYear) && (integerYear<=integerYearFromEndTimePeriod) && (integerMonthFromStartTimePeriod<=integerMonth) && (integerMonth<=integerMonthFromEndTimePeriod))
+            if((integerYearFromStartTimePeriod<=integerYear) && (integerYear<=integerYearFromEndTimePeriod) && (integerMonthFromStartTimePeriod<=integerMonth) && (integerMonth<=integerMonthFromEndTimePeriod) && (integerDayFromStartTimePeriod<=integerDay) && (integerDay<=integerDayFromEndTimePeriod))
             {
                 cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
                 counter++;

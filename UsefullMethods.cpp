@@ -3,6 +3,7 @@
 string UsefullMethods::loadLines()
 {
     string inputStream = "";
+    cin.clear();
     getline(cin, inputStream);
     return inputStream;
 }
@@ -57,9 +58,15 @@ float UsefullMethods::loadFloat()
 {
     string inputStream = "";
     float moneyNumber = 0;
+    string coma = ",";
     while (true)
     {
         getline(cin, inputStream);
+        size_t position = inputStream.find(coma);
+        if(position != string::npos)
+        {
+            inputStream.replace(position,1,".");
+        }
         stringstream myStream(inputStream);
         if (myStream >> moneyNumber)
             break;
@@ -112,6 +119,39 @@ int UsefullMethods::giveMeCurrentYear ()
     tm* now = localtime(&t);
     currentYear=now->tm_year + 1900;
     return currentYear;
+}
+string UsefullMethods::giveMeCurrentDate ()
+{
+    string currentDate = "";
+    int currentYear = 0;
+    int currentMonth = 0;
+    int currentDay = 0;
+    string strCurrentYear = "";
+    string strCurrentMonth = "";
+    string strCurrentDay = "";
+
+    time_t t = time(0);
+    tm* now = localtime(&t);
+    currentYear =now->tm_year + 1900;
+    currentMonth = now->tm_mon + 1;
+
+    currentDay = now->tm_mday;
+    strCurrentYear = UsefullMethods::conversionIntForString(currentYear);
+
+    strCurrentMonth = UsefullMethods::conversionIntForString(currentMonth);
+    if (currentMonth<10)
+    {
+        strCurrentMonth.insert(0,"0");
+    }
+    strCurrentDay = UsefullMethods::conversionIntForString(currentDay);
+    if(currentDay<10)
+    {
+        strCurrentDay.insert(0,"0");
+    }
+    currentDate += strCurrentYear;
+    currentDate += strCurrentMonth;
+    currentDate += strCurrentDay;
+    return currentDate;
 }
 string UsefullMethods::changeDateToDateDividedWithDashes(string dateWitoutDashes)
 {
