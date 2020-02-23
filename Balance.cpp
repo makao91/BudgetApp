@@ -8,6 +8,8 @@ void Balance::balanceCurrentMonth()
     float summIncomes = 0;
     float summExpenses = 0;
 
+    sort (expenses.begin(), expenses.end(), sortByDateExpenses);
+    sort (incomes.begin(), incomes.end(), sortByDateIncomes);
 
     cout<<"Incomes from current month:"<<endl;
     for (int i=0; i<incomes.size(); i++)
@@ -60,6 +62,9 @@ void Balance::balanceOfPreviousMonth()
     int counter = 1;
     float summIncomes = 0;
     float summExpenses = 0;
+
+    sort (expenses.begin(), expenses.end(), sortByDateExpenses);
+    sort (incomes.begin(), incomes.end(), sortByDateIncomes);
 
     cout<<"Incomes from current month:"<<endl;
     for (int i=0; i<incomes.size(); i++)
@@ -149,6 +154,9 @@ void Balance::balanceOfTimePeriod()
     int integerMonthFromEndTimePeriod = 0;
     int integerYearFromEndTimePeriod = 0;
 
+    sort (expenses.begin(), expenses.end(), sortByDateExpenses);
+    sort (incomes.begin(), incomes.end(), sortByDateIncomes);
+
 cout<<"Which time period do you want to see?"<<endl<<"Write your starting date (yyyy-mm)."<<endl;
 cin>>startTimePeriod;
 cout<<"Write your end date (yyyy-mm)."<<endl;
@@ -210,3 +218,13 @@ integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
 
     system("pause");
 }
+
+bool Balance::sortByDateExpenses (Expense left, Expense right)
+{
+    return UsefullMethods::conversionStringToInt(left.getDate()) < UsefullMethods::conversionStringToInt(right.getDate());
+}
+ bool Balance::sortByDateIncomes (Income left, Income right)
+{
+    return UsefullMethods::conversionStringToInt(left.getDate()) < UsefullMethods::conversionStringToInt(right.getDate());
+}
+
