@@ -2,6 +2,7 @@
 #define BALANCE_H
 
 #include <iostream>
+#include <algorithm>
 #include "IncomeMenager.h"
 #include "ExpenseMenager.h"
 
@@ -13,8 +14,8 @@ class Balance:  public ExpenseMenager, public IncomeMenager
 {
     int getYearFromDateString (string date);
     int getMonthFromDateString (string date);
-
-
+    static bool sortByDateExpenses (Expense left, Expense right);
+    static bool sortByDateIncomes (Income left, Income right);
 
 public:
     Balance(int idLogUser):ExpenseMenager(idLogUser), IncomeMenager(idLogUser){};
