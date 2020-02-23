@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-
-
 using namespace std;
 
 class Expense
@@ -27,6 +25,5 @@ public:
     string getDate();
     string getItem();
     float getAmount();
-
 };
 #endif

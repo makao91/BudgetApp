@@ -34,7 +34,6 @@ string MoneyOccurence::writeYourDate()
                 }
                 properStringDate+=singleData;
                 singleData = "";
-
                 numberOfSingleData++;
             }
         }

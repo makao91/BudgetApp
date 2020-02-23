@@ -10,6 +10,8 @@ void FileWithIncomes::appendIncomeToFile(Income income)
     xml.AddElem("UserId",income.getUserId());
     xml.AddElem("IncomeId", income.getIncomeId());
     xml.AddElem("Date", income.getDate());
+    cout<<income.getItem();
+     system("pause");
     xml.AddElem(income.getItem(),UsefullMethods::conversionFloatForString(income.getAmount()));
     xml.OutOfElem();
     xml.Save("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Incomes.xml");
@@ -40,9 +42,6 @@ vector <Income> FileWithIncomes::loadIncomesFromFile()
             xml.FindElem();
             singleIncome.setItem(xml.GetTagName());
             singleIncome.setAmount(UsefullMethods::conversionStringToFloat(xml.GetData()));
-                       // cout<<singleIncome.getIncomeId()<<endl<<singleIncome.getUserId()<<endl<<singleIncome.getDate()<<endl<<singleIncome.getItem()<<endl<<singleIncome.getAmount();
-                       // system("pause");
-
             incomes.push_back(singleIncome);
             xml.OutOfElem();
         }

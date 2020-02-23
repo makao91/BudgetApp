@@ -1,6 +1,5 @@
 #include "User.h"
 
-
 void User::setId(int newId)
 {
     if (newId >= 0)
@@ -22,7 +21,6 @@ void  User::setSurname(string newSurname)
 {
    surname = newSurname;
 }
-
 int  User::getId()
 {
     return id;
@@ -43,5 +41,3 @@ string  User::getSurname()
 {
     return surname;
 }
-
-

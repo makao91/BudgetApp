@@ -67,9 +67,7 @@ int main()
                 break;
             }
         }
-
     }
-
     return 0;
 }
 
@@ -87,14 +85,12 @@ char chooseOptionFromMainMenu()
     cout << "---------------------------" << endl;
     cout << "Your choice: ";
     wybor = getch();
-
     return wybor;
 }
 
 char chooseOptionFromUserMenu()
 {
     char wybor;
-
     system("cls");
     cout << " >>> USER MENU <<<" << endl;
     cout << "---------------------------" << endl;
@@ -109,6 +105,5 @@ char chooseOptionFromUserMenu()
     cout << "---------------------------" << endl;
     cout << "Your choice: ";
     wybor = getch();
-
     return wybor;
 }

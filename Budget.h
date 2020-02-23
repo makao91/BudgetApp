@@ -2,22 +2,16 @@
 #define BUDGET_H
 
 #include <iostream>
-
-//#include "Markup.h"
 #include "UserMenager.h"
-//#include "MoneyOccurence.h"
 #include "ExpenseMenager.h"
 #include "IncomeMenager.h"
 #include "Balance.h"
-
 
 using namespace std;
 
 class Budget
 {
-
     UserMenager userMenager;
-
     ExpenseMenager *expenseMenager;
     IncomeMenager *incomeMenager;
     Balance *balance;
@@ -48,6 +42,5 @@ public:
     void showBalanceOfCurrentMonth();
     void showBalanceOfPreviousMonth();
     void showBalanceOfSpecificTimePeriod();
-
 };
 #endif
