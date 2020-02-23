@@ -4,32 +4,25 @@ void UserMenager::userRegistration()
 {
     system("cls");
     User user = giveDataOfNewUser();
-
     users.push_back(user);
-
     fileWithUsers.appendUserToFile(user);
-
     cout << endl << "Registration was successful" << endl << endl;
     system("pause");
-
 }
 User UserMenager::giveDataOfNewUser()
 {
     User user;
     user.setId(getIdForNewUser());
-
     cout << "Write name: ";
     user.setName(UsefullMethods::loadLines());
     cout << "Write surname: ";
     user.setSurname(UsefullMethods::loadLines());
-
     do
     {
         cout << "Write login: ";
         user.setLogin(UsefullMethods::loadLines());
     }
     while (isThatLoginExist(user.getLogin()) == true);
-
     cout << "Write password: ";
     user.setPassword(UsefullMethods::loadLines());
     return user;
@@ -47,21 +40,16 @@ bool UserMenager::isThatLoginExist(string login)
     {
         if (users[i].getLogin()==login)
         {
-             cout<<endl<<"User with that login already exist."<<endl;
+            cout<<endl<<"User with that login already exist."<<endl;
             return true;
         }
-
     }
     return false;
 }
-void UserMenager::saveAllUsersToFile(vector <User> &users)
-{
-//    fileWithUsers.saveAllUsersToFile(&users);
-}
+
 int UserMenager::userLogin()
 {
     string login = "", password = "";
-
     cout << endl << "Write login: ";
     login = UsefullMethods::loadLines();
 
@@ -73,7 +61,6 @@ int UserMenager::userLogin()
             {
                 cout << "Write password. Tries left: " << numberOfTries << ": ";
                 password = UsefullMethods::loadLines();
-
                 if (users[i].getPassword()==password)
                 {
                     cout << endl << "You are login in." << endl << endl;
@@ -100,9 +87,7 @@ void UserMenager::changeLoggedUsersPassword()
     string newPassword = "";
     cout << "Write new password: ";
     newPassword = UsefullMethods::loadLines();
-
-  fileWithUsers.changePassword(users[idLoggedUser-1].getLogin(), newPassword);
-
+    fileWithUsers.changePassword(users[idLoggedUser-1].getLogin(), newPassword);
 }
 int UserMenager::getIdOffLoggedUser()
 {
@@ -111,7 +96,7 @@ int UserMenager::getIdOffLoggedUser()
 bool UserMenager::isAnyUserLogin()
 {
     if(idLoggedUser>0)
-         return true;
+        return true;
     else
         return false;
 }

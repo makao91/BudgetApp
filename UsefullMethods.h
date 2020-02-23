@@ -26,6 +26,5 @@ class UsefullMethods
     static string changeDateToDateDividedWithDashes(string dateWithoutDashes);
     static string changeDateToDateWithoutDashes(string dateWithDashes);
     static int giveMeCurrentYear ();
-
 };
 #endif

@@ -12,13 +12,10 @@ using namespace std;
 
 class FileWithExpenses
 {
-
 CMarkup xml;
 
 public:
-
     void appendExpenseToFile(Expense expense);
     vector <Expense> loadExpensesFromFile ();
-
 };
 #endif

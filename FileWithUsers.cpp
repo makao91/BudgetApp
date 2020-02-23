@@ -10,7 +10,6 @@ void FileWithUsers::appendUserToFile(User user)
     xml.AddElem("UserId",user.getId());
     xml.AddElem(user.getLogin(), user.getPassword());
     xml.AddElem(user.getName(),user.getSurname());
-    //xml.OutOfElem();
     xml.Save("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Users.xml");
 }
 
@@ -38,9 +37,6 @@ vector <User> FileWithUsers::loadUsersFromFile()
             xml.FindElem();
             user.setName(xml.GetTagName());
             user.setSurname(xml.GetData());
-
-            //cout<<user.getLogin();
-             //system("pause");
             users.push_back(user);
              xml.OutOfElem();
         }
@@ -66,4 +62,3 @@ void FileWithUsers::changePassword(string login, string newPassword)
     cout<<"Password was succesfully changed."<<endl<<"Press any button to continue."<<endl;
     system("pause");
 }
-

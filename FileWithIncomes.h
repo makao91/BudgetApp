@@ -14,9 +14,7 @@ class FileWithIncomes
 CMarkup xml;
 
 public:
-
     void appendIncomeToFile(Income income);
     vector <Income> loadIncomesFromFile ();
-
 };
 #endif

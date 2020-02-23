@@ -20,36 +20,36 @@ void Budget::appendNewExpense()
         expenseMenager = new ExpenseMenager(userMenager.getIdOffLoggedUser());
         expenseMenager->registrationOfNewExpense();
     }
-     else
-        {
-            cout<<"You need to log in first."<<endl;
-            system("pause");
-        }
+    else
+    {
+        cout<<"You need to log in first."<<endl;
+        system("pause");
+    }
 }
 void Budget::appendNewIncome()
 {
-     if (userMenager.isAnyUserLogin())
+    if (userMenager.isAnyUserLogin())
     {
         incomeMenager = new IncomeMenager(userMenager.getIdOffLoggedUser());
         incomeMenager->registrationOfNewIncome();
     }
-     else
-        {
-            cout<<"You need to log in first."<<endl;
-            system("pause");
-        }
+    else
+    {
+        cout<<"You need to log in first."<<endl;
+        system("pause");
+    }
 }
 void Budget::userLogOut ()
 {
-     userMenager.userLogOut();
-     delete incomeMenager;
-     incomeMenager = NULL;
-     delete expenseMenager;
-     expenseMenager = NULL;
+    userMenager.userLogOut();
+    delete incomeMenager;
+    incomeMenager = NULL;
+    delete expenseMenager;
+    expenseMenager = NULL;
 }
 void Budget::changeLoggedUsersPassword ()
 {
-   userMenager.changeLoggedUsersPassword();
+    userMenager.changeLoggedUsersPassword();
 }
 void Budget::showBalanceOfCurrentMonth()
 {

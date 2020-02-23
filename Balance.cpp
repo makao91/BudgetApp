@@ -10,8 +10,9 @@ void Balance::balanceCurrentMonth()
 
     sort (expenses.begin(), expenses.end(), sortByDateExpenses);
     sort (incomes.begin(), incomes.end(), sortByDateIncomes);
-
-    cout<<"Incomes from current month:"<<endl;
+    cout<<"==========================="<<endl;
+    cout<<"INCOMES FROM CURRENT MONTH:"<<endl;
+    cout<<"==========================="<<endl;
     for (int i=0; i<incomes.size(); i++)
     {
         if(incomes[i].getUserId()==IncomeMenager::idLoggedUser )
@@ -30,7 +31,9 @@ void Balance::balanceCurrentMonth()
         integerYear = 0;
     }
     cout<<endl;
-    cout<<"Expenses from current month:"<<endl;
+    cout<<"============================"<<endl;
+    cout<<"EXPENSES FROM CURRENT MONTH:"<<endl;
+    cout<<"============================"<<endl;
     counter = 1;
 
     for (int j=0; j<=expenses.size(); j++)
@@ -39,7 +42,7 @@ void Balance::balanceCurrentMonth()
         {
             integerMonth = getMonthFromDateString(expenses[j].getDate());
             integerYear = getYearFromDateString(expenses[j].getDate());
-            //cout<<integerMonth<<endl<<UsefullMethods::giveMeCurrentMonth();
+
             if((integerMonth == UsefullMethods::giveMeCurrentMonth()) && (integerYear == UsefullMethods::giveMeCurrentYear()))
             {
                 cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
@@ -49,9 +52,12 @@ void Balance::balanceCurrentMonth()
         }
     }
     cout<<endl;
+    cout<<"========"<<endl;
+    cout<<"SUMMARY:"<<endl;
+    cout<<"========"<<endl;
     cout<<"Sum of revenues: "<<summIncomes<<" zl"<<endl;
     cout<<"Total expenditures: "<<summExpenses<<" zl"<<endl;
-    cout<<"Total balance: "<<summIncomes - summExpenses<<" zl"<<endl;
+    cout<<"Total balance: "<<summIncomes - summExpenses<<" zl"<<endl<<endl;
 
     system("pause");
 }
@@ -66,7 +72,9 @@ void Balance::balanceOfPreviousMonth()
     sort (expenses.begin(), expenses.end(), sortByDateExpenses);
     sort (incomes.begin(), incomes.end(), sortByDateIncomes);
 
-    cout<<"Incomes from current month:"<<endl;
+    cout<<"============================"<<endl;
+    cout<<"INCOMES FROM PREVIOUS MONTH:"<<endl;
+    cout<<"============================"<<endl;
     for (int i=0; i<incomes.size(); i++)
     {
         if(incomes[i].getUserId()==IncomeMenager::idLoggedUser )
@@ -74,7 +82,7 @@ void Balance::balanceOfPreviousMonth()
             integerMonth = getMonthFromDateString(incomes[i].getDate());
             integerYear = getYearFromDateString(incomes[i].getDate());
 
-            if((integerMonth == UsefullMethods::giveMeCurrentMonth()) && (integerYear == UsefullMethods::giveMeCurrentYear()))
+            if((integerMonth == (UsefullMethods::giveMeCurrentMonth()-1)) && (integerYear == UsefullMethods::giveMeCurrentYear()))
             {
                 cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(incomes[i].getDate())<<endl<<incomes[i].getItem()<<" - "<<incomes[i].getAmount()<<" zl"<<endl;
                 counter++;
@@ -85,7 +93,9 @@ void Balance::balanceOfPreviousMonth()
         integerYear = 0;
     }
     cout<<endl;
-    cout<<"Expenses from current month:"<<endl;
+    cout<<"============================="<<endl;
+    cout<<"EXPENSES FROM PREVIOUS MONTH:"<<endl;
+    cout<<"============================="<<endl;
     counter = 1;
 
     for (int j=0; j<=expenses.size(); j++)
@@ -94,8 +104,8 @@ void Balance::balanceOfPreviousMonth()
         {
             integerMonth = getMonthFromDateString(expenses[j].getDate());
             integerYear = getYearFromDateString(expenses[j].getDate());
-            //cout<<integerMonth<<endl<<UsefullMethods::giveMeCurrentMonth();
-            if((integerMonth == UsefullMethods::giveMeCurrentMonth()) && (integerYear == UsefullMethods::giveMeCurrentYear()))
+
+            if((integerMonth == (UsefullMethods::giveMeCurrentMonth()-1)) && (integerYear == UsefullMethods::giveMeCurrentYear()))
             {
                 cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
                 counter++;
@@ -104,9 +114,12 @@ void Balance::balanceOfPreviousMonth()
         }
     }
     cout<<endl;
+    cout<<"========"<<endl;
+    cout<<"SUMMARY:"<<endl;
+    cout<<"========"<<endl;
     cout<<"Sum of revenues: "<<summIncomes<<" zl"<<endl;
     cout<<"Total expenditures: "<<summExpenses<<" zl"<<endl;
-    cout<<"Total balance: "<<summIncomes - summExpenses<<" zl"<<endl;
+    cout<<"Total balance: "<<summIncomes - summExpenses<<" zl"<<endl<<endl;
 
     system("pause");
 }
@@ -121,8 +134,7 @@ int Balance::getYearFromDateString(string date)
     temporaryYear += date[3];
 
     year = UsefullMethods::conversionStringToInt(temporaryYear);
-    //cout<<date<<endl<<temporaryYear<<endl<<year<<endl;
-    //system("pause");
+
     return year;
 }
 
@@ -134,10 +146,8 @@ int Balance::getMonthFromDateString(string date)
     temporaryMonth = date[4];
     temporaryMonth += date[5];
 
-
     month = UsefullMethods::conversionStringToInt(temporaryMonth);
-    //cout<<date<<endl<<temporaryMonth<<endl<<month<<endl;
-   // system("pause");
+
     return month;
 }
 void Balance::balanceOfTimePeriod()
@@ -157,11 +167,11 @@ void Balance::balanceOfTimePeriod()
     sort (expenses.begin(), expenses.end(), sortByDateExpenses);
     sort (incomes.begin(), incomes.end(), sortByDateIncomes);
 
-cout<<"Which time period do you want to see?"<<endl<<"Write your starting date (yyyy-mm)."<<endl;
+cout<<"Which time period do you want to see?"<<endl<<endl<<"Write your starting date (yyyy-mm)."<<endl;
 cin>>startTimePeriod;
 cout<<"Write your end date (yyyy-mm)."<<endl;
 cin>>finishTimePeriod;
-//cout << startTimePeriod<<endl<<finishTimePeriod<<endl;
+
 startTimePeriod = UsefullMethods::changeDateToDateWithoutDashes(startTimePeriod);
 finishTimePeriod = UsefullMethods::changeDateToDateWithoutDashes(finishTimePeriod);
 
@@ -169,9 +179,10 @@ integerMonthFromStartTimePeriod = getMonthFromDateString(startTimePeriod);
 integerYearFromStartTimePeriod = getYearFromDateString(startTimePeriod);
 integerMonthFromEndTimePeriod = getMonthFromDateString(finishTimePeriod);
 integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
-//cout<<integerMonthFromStartTimePeriod<<endl<<integerYearFromStartTimePeriod<<endl<<integerMonthFromEndTimePeriod<<endl<<integerYearFromEndTimePeriod;
 
-    cout<<"Incomes:"<<endl;
+    cout<<"========"<<endl;
+    cout<<"INCOMES:"<<endl;
+    cout<<"========"<<endl;
     for (int i=0; i<incomes.size(); i++)
     {
         if(incomes[i].getUserId()==IncomeMenager::idLoggedUser )
@@ -190,7 +201,9 @@ integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
         integerYear = 0;
     }
     cout<<endl;
-    cout<<"Expenses:"<<endl;
+    cout<<"========="<<endl;
+    cout<<"EXPENSES:"<<endl;
+    cout<<"========="<<endl;
     counter = 1;
 
     for (int j=0; j<=expenses.size(); j++)
@@ -199,12 +212,9 @@ integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
         {
             integerMonth = getMonthFromDateString(expenses[j].getDate());
             integerYear = getYearFromDateString(expenses[j].getDate());
-            //cout<<integerMonth<<endl<<UsefullMethods::giveMeCurrentMonth();
-           // cout<<integerYearFromStartTimePeriod<<endl<<integerYear<<endl<<integerYearFromEndTimePeriod<<endl<<integerMonthFromStartTimePeriod<<endl<<integerMonth<<endl<<integerMonthFromEndTimePeriod<<endl;
-            //system("pause");
+
             if((integerYearFromStartTimePeriod<=integerYear) && (integerYear<=integerYearFromEndTimePeriod) && (integerMonthFromStartTimePeriod<=integerMonth) && (integerMonth<=integerMonthFromEndTimePeriod))
-            {   //cout<<integerYearFromStartTimePeriod<<endl<<integerYear<<endl<<integerYearFromEndTimePeriod<<endl<<integerMonthFromStartTimePeriod<<endl<<integerMonth<<endl<<integerMonthFromEndTimePeriod<<endl;
-            //system("pause");
+            {
                 cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
                 counter++;
                 summExpenses += expenses[j].getAmount();
@@ -212,9 +222,12 @@ integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
         }
     }
     cout<<endl;
+    cout<<"========"<<endl;
+    cout<<"SUMMARY:"<<endl;
+    cout<<"========"<<endl;
     cout<<"Sum of revenues: "<<summIncomes<<" zl"<<endl;
     cout<<"Total expenditures: "<<summExpenses<<" zl"<<endl;
-    cout<<"Total balance: "<<summIncomes - summExpenses<<" zl"<<endl;
+    cout<<"Total balance: "<<summIncomes - summExpenses<<" zl"<<endl<<endl;
 
     system("pause");
 }
@@ -227,4 +240,3 @@ bool Balance::sortByDateExpenses (Expense left, Expense right)
 {
     return UsefullMethods::conversionStringToInt(left.getDate()) < UsefullMethods::conversionStringToInt(right.getDate());
 }
-

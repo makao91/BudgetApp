@@ -27,7 +27,6 @@ int UsefullMethods::conversionStringToInt(string number)
     int numberInt;
     istringstream iss(number);
     iss >> numberInt;
-
     return numberInt;
 }
 string UsefullMethods::getNumber(string text, int charPosition)
@@ -44,11 +43,9 @@ int UsefullMethods::loadInteger()
 {
     string inputStream = "";
     int number = 0;
-
     while (true)
     {
         getline(cin, inputStream);
-
         stringstream myStream(inputStream);
         if (myStream >> number)
             break;
@@ -60,11 +57,9 @@ float UsefullMethods::loadFloat()
 {
     string inputStream = "";
     float moneyNumber = 0;
-
     while (true)
     {
         getline(cin, inputStream);
-
         stringstream myStream(inputStream);
         if (myStream >> moneyNumber)
             break;
@@ -76,11 +71,9 @@ char UsefullMethods::loadCharacter()
 {
     string inputStream = "";
     char character  = {0};
-
     while (true)
     {
         getline(cin, inputStream);
-
         if (inputStream.length() == 1)
         {
             character = inputStream[0];
@@ -102,32 +95,29 @@ float UsefullMethods::conversionStringToFloat(string number)
     float numberInt;
     istringstream iss(number);
     iss >> numberInt;
-
     return numberInt;
 }
 int UsefullMethods::giveMeCurrentMonth ()
 {
     int currentMonth;
-   time_t t = time(0);   // get time now
+    time_t t = time(0);
     tm* now = localtime(&t);
     currentMonth=now->tm_mon + 1;
-
     return currentMonth;
 }
 int UsefullMethods::giveMeCurrentYear ()
 {
     int currentYear;
-   time_t t = time(0);   // get time now
+    time_t t = time(0);
     tm* now = localtime(&t);
     currentYear=now->tm_year + 1900;
-
     return currentYear;
 }
 string UsefullMethods::changeDateToDateDividedWithDashes(string dateWitoutDashes)
 {
-     dateWitoutDashes.insert(4,"-");
-     dateWitoutDashes.insert(7,"-");
-     return dateWitoutDashes;
+    dateWitoutDashes.insert(4,"-");
+    dateWitoutDashes.insert(7,"-");
+    return dateWitoutDashes;
 }
 string UsefullMethods::changeDateToDateWithoutDashes(string dateWithDashes)
 {

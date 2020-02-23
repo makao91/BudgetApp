@@ -5,26 +5,19 @@ void IncomeMenager::registrationOfNewIncome()
 {
     system("cls");
     Income singleIncome = addMoneyOccurence();
-
     incomes.push_back(singleIncome);
-   // cout<<singleIncome.getIncomeId()<<endl<<singleIncome.getItem()<<endl;
-    system("pause");
-
     fileWithIncomes.appendIncomeToFile(singleIncome);
-
     cout << endl << "Registration was successful" << endl << endl;
     system("pause");
-
 }
 Income IncomeMenager::addMoneyOccurence ()
 {
-
     Income singleIncome;
     singleIncome.setUserId(idLoggedUser);
     singleIncome.setIncomeId(getIdForNewIncome());
     singleIncome.setDate(writeYourDate());
     cout<<"Income came from:"<<endl;
-    UsefullMethods::loadLines();
+    cin.sync();
     singleIncome.setItem(UsefullMethods::loadLines());
     cout<<"How much did you earn?"<<endl;
     singleIncome.setAmount(UsefullMethods::loadFloat());
