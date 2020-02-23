@@ -15,7 +15,7 @@ Expense ExpenseMenager::addMoneyOccurence ()
     singleExpense.setUserId(idLoggedUser);
     singleExpense.setExpenseId(getIdForNewExpense());
     singleExpense.setDate(writeYourDate());
-    cout<<"What did you spend the money on?"<<endl;
+    cout<<"What did you spend the money on? (text-text-text)"<<endl;
     cin.sync();
     singleExpense.setItem(UsefullMethods::loadLines());
     cout<<"How much did it cost?"<<endl;
