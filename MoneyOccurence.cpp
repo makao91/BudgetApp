@@ -12,7 +12,7 @@ string MoneyOccurence::writeYourDate()
     choosenOne = getch();
     if(choosenOne == 'y')
     {
-        properStringDate = UsefullMethods::giveMeCurrentDate();
+        properStringDate = DateOperations::giveMeCurrentDate();
         return properStringDate;
     }
     else

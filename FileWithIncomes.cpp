@@ -12,14 +12,14 @@ void FileWithIncomes::appendIncomeToFile(Income income)
     xml.AddElem("Date", income.getDate());
     xml.AddElem(income.getItem(),UsefullMethods::conversionFloatForString(income.getAmount()));
     xml.OutOfElem();
-    xml.Save("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Incomes.xml");
+    xml.Save("Incomes.xml");
 }
 
 vector <Income> FileWithIncomes::loadIncomesFromFile()
 {
     vector <Income> incomes;
     Income singleIncome;
-    if (xml.Load("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Incomes.xml")==false)
+    if (xml.Load("Incomes.xml")==false)
     {
         xml.AddElem("Incomes");
     }

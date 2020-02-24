@@ -12,14 +12,14 @@ void FileWithExpenses::appendExpenseToFile(Expense expense)
     xml.AddElem("Date", expense.getDate());
     xml.AddElem(expense.getItem(),UsefullMethods::conversionFloatForString(expense.getAmount()));
     xml.OutOfElem();
-    xml.Save("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Expenses.xml");
+    xml.Save("Expenses.xml");
 }
 
 vector <Expense> FileWithExpenses::loadExpensesFromFile()
 {
     vector <Expense> expenses;
     Expense singleExpense;
-    if (xml.Load("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Expenses.xml")==false)
+    if (xml.Load("Expenses.xml")==false)
     {
         xml.AddElem("Expenses");
     }

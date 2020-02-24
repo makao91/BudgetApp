@@ -24,7 +24,7 @@ Expense ExpenseMenager::addMoneyOccurence ()
 }
 int ExpenseMenager::getIdForNewExpense()
 {
-    if (expenses.empty() == true)
+    if (expenses.empty())
         return 1;
     else
         return expenses.back().getExpenseId() + 1;

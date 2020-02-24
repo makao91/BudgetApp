@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1582485754 source:c:\users\marcin\desktop\obiektówka\budgetapp\balance.cpp
+1582557828 source:c:\users\marcin\desktop\obiektówka\budgetapp\balance.cpp
 	"Balance.h"
 
 1582481726 source:c:\users\marcin\desktop\obiektówka\budgetapp\budget.cpp
@@ -11,19 +11,19 @@
 1582481726 c:\users\marcin\desktop\obiektówka\budgetapp\expense.h
 	<iostream>
 
-1582481726 source:c:\users\marcin\desktop\obiektówka\budgetapp\expensemenager.cpp
+1582557196 source:c:\users\marcin\desktop\obiektówka\budgetapp\expensemenager.cpp
 	"ExpenseMenager.h"
 
 1582481726 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithexpenses.cpp
 	"FileWithExpenses.h"
 
-1582483173 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithincomes.cpp
+1582486806 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithincomes.cpp
 	"FileWithIncomes.h"
 
 1582481726 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithusers.cpp
 	"FileWithUsers.h"
 
-1582486083 source:c:\users\marcin\desktop\obiektówka\budgetapp\incomemenager.cpp
+1582557196 source:c:\users\marcin\desktop\obiektówka\budgetapp\incomemenager.cpp
 	"IncomeMenager.h"
 
 1582481726 source:c:\users\marcin\desktop\obiektówka\budgetapp\main.cpp
@@ -31,13 +31,13 @@
 	<conio.h>
 	"Budget.h"
 
-1582483767 source:c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.cpp
+1582557828 source:c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.cpp
 	"MoneyOccurence.h"
 
-1582486083 source:c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.cpp
+1582557634 source:c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.cpp
 	"UsefullMethods.h"
 
-1582483056 c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.h
+1582557634 c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.h
 	<iostream>
 	<sstream>
 	<algorithm>
@@ -50,7 +50,7 @@
 1581630288 c:\users\marcin\desktop\obiektówka\budgetapp\user.h
 	<iostream>
 
-1582481726 source:c:\users\marcin\desktop\obiektówka\budgetapp\usermenager.cpp
+1582557196 source:c:\users\marcin\desktop\obiektówka\budgetapp\usermenager.cpp
 	"UserMenager.h"
 
 1581591878 source:c:\users\marcin\desktop\obiektówka\budgetapp\income.cpp
@@ -95,10 +95,11 @@
 	"IncomeMenager.h"
 	"Balance.h"
 
-1582483056 c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.h
+1582557856 c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.h
 	<iostream>
 	<conio.h>
 	"UsefullMethods.h"
+	"DateOperations.h"
 
 1582481726 c:\users\marcin\desktop\obiektówka\budgetapp\expensemenager.h
 	<iostream>
@@ -127,9 +128,18 @@
 	"Income.h"
 	"UsefullMethods.h"
 
-1582485387 c:\users\marcin\desktop\obiektówka\budgetapp\balance.h
+1582557634 c:\users\marcin\desktop\obiektówka\budgetapp\balance.h
 	<iostream>
 	<algorithm>
 	"IncomeMenager.h"
 	"ExpenseMenager.h"
+	"DateOperations.h"
+
+1582557551 c:\users\marcin\desktop\obiektówka\budgetapp\dateoperations.h
+	<string>
+	<ctime>
+	"UsefullMethods.h"
+
+1582557551 source:c:\users\marcin\desktop\obiektówka\budgetapp\dateoperations.cpp
+	"DateOperations.h"
 

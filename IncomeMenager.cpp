@@ -24,7 +24,7 @@ Income IncomeMenager::addMoneyOccurence ()
 }
 int IncomeMenager::getIdForNewIncome()
 {
-    if (incomes.empty() == true)
+    if (incomes.empty())
         return 1;
     else
         return incomes.back().getIncomeId() + 1;

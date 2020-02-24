@@ -29,7 +29,7 @@ User UserMenager::giveDataOfNewUser()
 }
 int UserMenager::getIdForNewUser()
 {
-    if (users.empty() == true)
+    if (users.empty())
         return 1;
     else
         return users.back().getId() + 1;

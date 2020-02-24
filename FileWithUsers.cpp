@@ -10,14 +10,14 @@ void FileWithUsers::appendUserToFile(User user)
     xml.AddElem("UserId",user.getId());
     xml.AddElem(user.getLogin(), user.getPassword());
     xml.AddElem(user.getName(),user.getSurname());
-    xml.Save("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Users.xml");
+    xml.Save("Users.xml");
 }
 
 vector <User> FileWithUsers::loadUsersFromFile()
 {
     vector <User> users;
     User user;
-    if (xml.Load("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Users.xml")==false)
+    if (xml.Load("Users.xml")==false)
     {
         xml.AddElem("Users");
     }
