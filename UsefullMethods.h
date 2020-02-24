@@ -22,10 +22,5 @@ class UsefullMethods
     static float loadFloat();
     static string conversionFloatForString(float number);
     static float conversionStringToFloat(string number);
-    static int giveMeCurrentMonth ();
-    static string changeDateToDateDividedWithDashes(string dateWithoutDashes);
-    static string changeDateToDateWithoutDashes(string dateWithDashes);
-    static int giveMeCurrentYear ();
-    static string giveMeCurrentDate ();
 };
 #endif

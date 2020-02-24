@@ -36,6 +36,8 @@
 		<Unit filename="Balance.h" />
 		<Unit filename="Budget.cpp" />
 		<Unit filename="Budget.h" />
+		<Unit filename="DateOperations.cpp" />
+		<Unit filename="DateOperations.h" />
 		<Unit filename="Expense.cpp" />
 		<Unit filename="Expense.h" />
 		<Unit filename="ExpenseMenager.cpp" />

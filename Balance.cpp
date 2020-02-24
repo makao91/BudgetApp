@@ -20,9 +20,9 @@ void Balance::balanceCurrentMonth()
             integerMonth = getMonthFromDateString(incomes[i].getDate());
             integerYear = getYearFromDateString(incomes[i].getDate());
 
-            if((integerMonth == UsefullMethods::giveMeCurrentMonth()) && (integerYear == UsefullMethods::giveMeCurrentYear()))
+            if((integerMonth == DateOperations::giveMeCurrentMonth()) && (integerYear == DateOperations::giveMeCurrentYear()))
             {
-                cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(incomes[i].getDate())<<endl<<incomes[i].getItem()<<" - "<<incomes[i].getAmount()<<" zl"<<endl;
+                cout<<counter<<". "<<endl<<"Date: "<<DateOperations::changeDateToDateDividedWithDashes(incomes[i].getDate())<<endl<<incomes[i].getItem()<<" - "<<incomes[i].getAmount()<<" zl"<<endl;
                 counter++;
                 summIncomes += incomes[i].getAmount();
             }
@@ -43,9 +43,9 @@ void Balance::balanceCurrentMonth()
             integerMonth = getMonthFromDateString(expenses[j].getDate());
             integerYear = getYearFromDateString(expenses[j].getDate());
 
-            if((integerMonth == UsefullMethods::giveMeCurrentMonth()) && (integerYear == UsefullMethods::giveMeCurrentYear()))
+            if((integerMonth == DateOperations::giveMeCurrentMonth()) && (integerYear == DateOperations::giveMeCurrentYear()))
             {
-                cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
+                cout<<counter<<". "<<endl<<"Date: "<<DateOperations::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
                 counter++;
                 summExpenses += expenses[j].getAmount();
             }
@@ -82,9 +82,9 @@ void Balance::balanceOfPreviousMonth()
             integerMonth = getMonthFromDateString(incomes[i].getDate());
             integerYear = getYearFromDateString(incomes[i].getDate());
 
-            if((integerMonth == (UsefullMethods::giveMeCurrentMonth()-1)) && (integerYear == UsefullMethods::giveMeCurrentYear()))
+            if((integerMonth == (DateOperations::giveMeCurrentMonth()-1)) && (integerYear == DateOperations::giveMeCurrentYear()))
             {
-                cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(incomes[i].getDate())<<endl<<incomes[i].getItem()<<" - "<<incomes[i].getAmount()<<" zl"<<endl;
+                cout<<counter<<". "<<endl<<"Date: "<<DateOperations::changeDateToDateDividedWithDashes(incomes[i].getDate())<<endl<<incomes[i].getItem()<<" - "<<incomes[i].getAmount()<<" zl"<<endl;
                 counter++;
                 summIncomes += incomes[i].getAmount();
             }
@@ -105,9 +105,9 @@ void Balance::balanceOfPreviousMonth()
             integerMonth = getMonthFromDateString(expenses[j].getDate());
             integerYear = getYearFromDateString(expenses[j].getDate());
 
-            if((integerMonth == (UsefullMethods::giveMeCurrentMonth()-1)) && (integerYear == UsefullMethods::giveMeCurrentYear()))
+            if((integerMonth == (DateOperations::giveMeCurrentMonth()-1)) && (integerYear == DateOperations::giveMeCurrentYear()))
             {
-                cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
+                cout<<counter<<". "<<endl<<"Date: "<<DateOperations::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
                 counter++;
                 summExpenses += expenses[j].getAmount();
             }
@@ -186,8 +186,8 @@ cin>>startTimePeriod;
 cout<<"Write your end date (yyyy-mm)."<<endl;
 cin>>finishTimePeriod;
 
-startTimePeriod = UsefullMethods::changeDateToDateWithoutDashes(startTimePeriod);
-finishTimePeriod = UsefullMethods::changeDateToDateWithoutDashes(finishTimePeriod);
+startTimePeriod = DateOperations::changeDateToDateWithoutDashes(startTimePeriod);
+finishTimePeriod = DateOperations::changeDateToDateWithoutDashes(finishTimePeriod);
 
 integerDayFromStartTimePeriod = getDayFromDateString(startTimePeriod);
 integerMonthFromStartTimePeriod = getMonthFromDateString(startTimePeriod);
@@ -209,7 +209,7 @@ integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
 
             if((integerYearFromStartTimePeriod<=integerYear) && (integerYear<=integerYearFromEndTimePeriod) && (integerMonthFromStartTimePeriod<=integerMonth) && (integerMonth<=integerMonthFromEndTimePeriod) && (integerDayFromStartTimePeriod<=integerDay) && (integerDay<=integerDayFromEndTimePeriod))
             {
-                cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(incomes[i].getDate())<<endl<<incomes[i].getItem()<<" - "<<incomes[i].getAmount()<<" zl"<<endl;
+                cout<<counter<<". "<<endl<<"Date: "<<DateOperations::changeDateToDateDividedWithDashes(incomes[i].getDate())<<endl<<incomes[i].getItem()<<" - "<<incomes[i].getAmount()<<" zl"<<endl;
                 counter++;
                 summIncomes += incomes[i].getAmount();
             }
@@ -234,7 +234,7 @@ integerYearFromEndTimePeriod = getYearFromDateString(finishTimePeriod);
 
             if((integerYearFromStartTimePeriod<=integerYear) && (integerYear<=integerYearFromEndTimePeriod) && (integerMonthFromStartTimePeriod<=integerMonth) && (integerMonth<=integerMonthFromEndTimePeriod) && (integerDayFromStartTimePeriod<=integerDay) && (integerDay<=integerDayFromEndTimePeriod))
             {
-                cout<<counter<<". "<<endl<<"Date: "<<UsefullMethods::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
+                cout<<counter<<". "<<endl<<"Date: "<<DateOperations::changeDateToDateDividedWithDashes(expenses[j].getDate())<<endl<<expenses[j].getItem()<<" - "<<expenses[j].getAmount()<<" zl"<<endl;
                 counter++;
                 summExpenses += expenses[j].getAmount();
             }
