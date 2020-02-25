@@ -30,7 +30,7 @@ int main()
                 exit(0);
                 break;
             default:
-                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                cout << endl << "Try again." << endl << endl;
                 system("pause");
                 break;
             }
