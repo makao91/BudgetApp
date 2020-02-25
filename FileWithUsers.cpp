@@ -58,7 +58,7 @@ void FileWithUsers::changePassword(string login, string newPassword)
         }
         xml.OutOfElem();
     }
-    xml.Save("C:\\Users\\Marcin\\Desktop\\Obiektówka\\BudgetApp\\Users.xml");
+    xml.Save("Users.xml");
     cout<<"Password was succesfully changed."<<endl<<"Press any button to continue."<<endl;
     system("pause");
 }

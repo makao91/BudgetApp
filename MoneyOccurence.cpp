@@ -13,6 +13,7 @@ string MoneyOccurence::writeYourDate()
     if(choosenOne == 'y')
     {
         properStringDate = DateOperations::giveMeCurrentDate();
+        properStringDate = DateOperations::changeDateToDateDividedWithDashes(properStringDate);
         return properStringDate;
     }
     else
@@ -53,6 +54,7 @@ string MoneyOccurence::writeYourDate()
 
             if((properYear>=2000) && (properYear<=2100) && (properMonth>=1) && (properMonth<=12) && (properDay>=1) && (properDay<=31))
             {
+                properStringDate = DateOperations::changeDateToDateDividedWithDashes(properStringDate);
                 return properStringDate;
             }
             else
