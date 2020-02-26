@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1582558816 source:c:\users\marcin\desktop\obiektówka\budgetapp\balance.cpp
+1582711035 source:c:\users\marcin\desktop\obiektówka\budgetapp\balance.cpp
 	"Balance.h"
 
 1582481726 source:c:\users\marcin\desktop\obiektówka\budgetapp\budget.cpp
@@ -20,18 +20,18 @@
 1582558817 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithincomes.cpp
 	"FileWithIncomes.h"
 
-1582644350 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithusers.cpp
+1582647012 source:c:\users\marcin\desktop\obiektówka\budgetapp\filewithusers.cpp
 	"FileWithUsers.h"
 
-1582644613 source:c:\users\marcin\desktop\obiektówka\budgetapp\incomemenager.cpp
+1582647012 source:c:\users\marcin\desktop\obiektówka\budgetapp\incomemenager.cpp
 	"IncomeMenager.h"
 
-1582644350 source:c:\users\marcin\desktop\obiektówka\budgetapp\main.cpp
+1582647012 source:c:\users\marcin\desktop\obiektówka\budgetapp\main.cpp
 	<iostream>
 	<conio.h>
 	"Budget.h"
 
-1582646145 source:c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.cpp
+1582647012 source:c:\users\marcin\desktop\obiektówka\budgetapp\moneyoccurence.cpp
 	"MoneyOccurence.h"
 
 1582558817 source:c:\users\marcin\desktop\obiektówka\budgetapp\usefullmethods.cpp

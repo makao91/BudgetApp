@@ -186,9 +186,6 @@ cin>>startTimePeriod;
 cout<<"Write your end date (yyyy-mm)."<<endl;
 cin>>finishTimePeriod;
 
-startTimePeriod = DateOperations::changeDateToDateWithoutDashes(startTimePeriod);
-finishTimePeriod = DateOperations::changeDateToDateWithoutDashes(finishTimePeriod);
-
 integerDayFromStartTimePeriod = getDayFromDateString(startTimePeriod);
 integerMonthFromStartTimePeriod = getMonthFromDateString(startTimePeriod);
 integerYearFromStartTimePeriod = getYearFromDateString(startTimePeriod);
